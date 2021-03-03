@@ -15,7 +15,9 @@ interface Maru<T = any> {
 
 const store: Store = {};
 
-export const useMaru = <T>(key: string, defaultValue: T) => {
+type UseMaruReturn<T> = [T, (value: T) => void];
+
+export const useMaru = <T>(key: string, initialValue?: T): UseMaruReturn<T> => {
   const [id] = useState(Math.floor(Math.random() * 100000000000).toString());
   const [shouldUpdate, setShouldUpdate] = useState(false);
 
@@ -32,7 +34,10 @@ export const useMaru = <T>(key: string, defaultValue: T) => {
   }, [key, id]);
 
   if (!store[key]) {
-    store[key] = { value: defaultValue, triggers: {} };
+    if (initialValue === undefined) {
+      throw "'initialValue' cannot be undefined. If intended, use null instead.";
+    }
+    store[key] = { value: initialValue, triggers: {} };
   }
   const maru = store[key] as Maru<T>;
 
