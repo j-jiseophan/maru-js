@@ -1,6 +1,6 @@
 {
-    "name": "marujs",
-    "version": "0.2.0",
+    "name": "maru-js",
+    "version": "0.2.1",
     "description": "A minimal global state management library for React",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",

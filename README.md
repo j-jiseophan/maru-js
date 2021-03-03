@@ -5,13 +5,13 @@ A minimal global state management library for React
 ## Installation
 
 ```bash
-npm i --save marujs
+npm i --save maru-js
 ```
 
 or using yarn,
 
 ```bash
-yarn add marujs
+yarn add maru-js
 ```
 
 ## useMaru
@@ -25,7 +25,7 @@ const [state, setState] = useMaru(key, initialValue);
 Example
 
 ```tsx
-import { useMaru } from "marujs";
+import { useMaru } from "maru-js";
 
 const CounterA = () => {
   const [count, setCount] = useMaru("count", 0);
