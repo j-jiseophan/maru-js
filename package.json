@@ -1,22 +1,22 @@
 {
-  "name": "marujs",
-  "version": "0.1.1",
-  "description": "A minimal global state management library for React",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "scripts": {
-    "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Jiseop Han <jshan2017@gmail.com>",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jshan2017/marujs.git"
-  },
-  "devDependencies": {
-    "@types/react": "^17.0.2",
-    "react": "^17.0.1",
-    "typescript": "^4.2.2"
-  }
+    "name": "marujs",
+    "version": "0.2.0",
+    "description": "A minimal global state management library for React",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "tsc",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Jiseop Han <jshan2017@gmail.com>",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jshan2017/marujs.git"
+    },
+    "devDependencies": {
+        "@types/react": "^17.0.2",
+        "react": "^17.0.1",
+        "typescript": "^4.2.2"
+    }
 }
