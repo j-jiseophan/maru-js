@@ -34,7 +34,7 @@ export const useMaru = <T>(key: string, defaultValue: T) => {
   if (!store[key]) {
     store[key] = { value: defaultValue, triggers: {} };
   }
-  const maru = store[key];
+  const maru = store[key] as Maru<T>;
 
   if (!maru.triggers[id]) {
     maru.triggers[id] = () => {
@@ -51,5 +51,5 @@ export const useMaru = <T>(key: string, defaultValue: T) => {
     [maru]
   );
 
-  return [store[key].value, setMaruState];
+  return [maru.value, setMaruState];
 };
