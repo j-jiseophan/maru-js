@@ -1,7 +1,7 @@
 import { DependencyList, useCallback, useEffect, useState } from "react";
 
 import { Store, InitialData, UseMaruReturn, Maru, MaruUpdater } from "./types";
-import { isServerSide } from "./utils";
+import { isServerSide, generateId } from "./utils";
 
 const store: Store = {};
 
@@ -33,7 +33,7 @@ export const useMaruInit = (initialData: InitialData): void => {
 };
 
 export const useMaru = <T>(key: string): UseMaruReturn<T> => {
-  const [id] = useState(Math.floor(Math.random() * 100000000000).toString());
+  const [id] = useState(generateId());
   const [shouldUpdate, setShouldUpdate] = useState(false);
 
   useEffect(() => {
