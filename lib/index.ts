@@ -88,7 +88,7 @@ export const useMaruUpdater = <T>(
   dependencies: DependencyList
 ): void => {
   const maru = store[key] as Maru<T>;
-  if (maru === undefined) {
+  if (maru === undefined && !isServerSide()) {
     throw `The state for key '${key}' has not been initialized.`;
   }
   useEffect(() => {
