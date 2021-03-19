@@ -44,7 +44,7 @@ export const useMaru = <T>(key: string): UseMaruReturn<T> => {
 
   useEffect(() => {
     return () => {
-      delete store[key].triggers[id];
+      delete store[key]?.triggers[id];
     };
   }, [key, id]);
 
