@@ -54,6 +54,10 @@ export const useMaru = <T>(key: string): UseMaruReturn<T> => {
     (value: T) => {
       maru.value = value;
       const { triggers } = maru;
+      /* 
+        Push update tasks to callback queue to prevent updating other components 
+        before rendering the current component's has been finished.
+      */
       setTimeout(() => {
         Object.keys(triggers).forEach((triggerId) => triggers[triggerId]());
       }, 0);
