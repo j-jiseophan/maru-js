@@ -13,7 +13,7 @@
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/jshan2017/maru-js.git"
+        "url": "git+https://github.com/j-jiseophan/maru-js.git"
     },
     "devDependencies": {
         "@testing-library/react-hooks": "^5.1.0",
